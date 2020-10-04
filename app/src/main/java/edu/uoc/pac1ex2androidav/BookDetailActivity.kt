@@ -1,7 +1,8 @@
-package edu.uoc.pac1androidav
+package edu.uoc.pac1ex2androidav
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import edu.uoc.pac1ex2androidav.model.BookItem
 import kotlinx.android.synthetic.main.activity_book_detail.*
 
 class BookDetailActivity : AppCompatActivity() {
@@ -10,8 +11,8 @@ class BookDetailActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_book_detail)
 
-        val item = intent.getStringExtra("element")
-        app_bar.title = "Item " + item
+        val item = intent.getSerializableExtra("item") as BookItem
+        app_bar.title = "Item " + item.titol
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
         supportActionBar?.title = ""

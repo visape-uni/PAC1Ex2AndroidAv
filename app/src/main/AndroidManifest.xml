@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.uoc.pac1androidav">
+    package="edu.uoc.pac1ex2androidav">
 
     <application
         android:allowBackup="true"
@@ -9,14 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".BookListActivity">
+        <activity android:name="edu.uoc.pac1ex2androidav.BookListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".BookDetailActivity"/>
+        <activity android:name="edu.uoc.pac1ex2androidav.BookDetailActivity"/>
     </application>
 
 </manifest>

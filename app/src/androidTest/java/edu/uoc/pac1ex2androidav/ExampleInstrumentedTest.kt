@@ -1,4 +1,4 @@
-package edu.uoc.pac1androidav
+package edu.uoc.pac1ex2androidav
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

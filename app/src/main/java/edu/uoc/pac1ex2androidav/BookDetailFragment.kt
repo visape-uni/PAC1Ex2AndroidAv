@@ -1,19 +1,20 @@
-package edu.uoc.pac1androidav
+package edu.uoc.pac1ex2androidav
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import edu.uoc.pac1ex2androidav.model.BookItem
 import kotlinx.android.synthetic.main.fragment_book_detail.*
 
 class BookDetailFragment : Fragment() {
 
     companion object {
-        fun newInstance(item: String) : BookDetailFragment {
+        fun newInstance(item: BookItem) : BookDetailFragment {
             val fragment = BookDetailFragment()
             val args = Bundle()
-            args.putString("item", item)
+            args.putSerializable("item", item)
             fragment.arguments = args
             return fragment
         }
@@ -29,6 +30,7 @@ class BookDetailFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        detailItem.text = getText(R.string.fragment_text_1).toString() + (arguments?.get("item") ?: null)
+        val item = arguments?.getSerializable("item") as BookItem
+        detailItem.text = getText(R.string.fragment_text_1).toString() + item.titol
     }
 }

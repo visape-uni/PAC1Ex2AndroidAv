@@ -1,4 +1,4 @@
-package edu.uoc.pac1androidav
+package edu.uoc.pac1ex2androidav
 
 import org.junit.Test
 
