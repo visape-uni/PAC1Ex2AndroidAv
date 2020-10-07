@@ -12,7 +12,7 @@ class BookDetailActivity : AppCompatActivity() {
         setContentView(R.layout.activity_book_detail)
 
         val item = intent.getSerializableExtra("item") as BookItem
-        app_bar.title = "Item " + item.titol
+        app_bar.title = item.titol
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.setDisplayShowHomeEnabled(true)
         supportActionBar?.title = ""

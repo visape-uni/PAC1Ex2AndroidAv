@@ -43,7 +43,7 @@ class MyAdapter(private val mValues: MutableList<BookItem>, private val mTwoPane
             if(mTwoPane) {
                 val fragment = BookDetailFragment.newInstance(holder.mItem!!)
                 val activity = (it.context as AppCompatActivity)
-                activity.supportFragmentManager.beginTransaction().replace(it.frameLayoutList.id, fragment).commit()
+                activity.supportFragmentManager.beginTransaction().replace(activity.frameLayoutList.id, fragment).commit()
             } else {
                 val newIntent = Intent(it.context, BookDetailActivity::class.java)
                 newIntent.putExtra("item", holder.mItem)

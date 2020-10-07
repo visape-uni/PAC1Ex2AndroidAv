@@ -26,7 +26,10 @@ class BookListActivity : AppCompatActivity() {
         listView.setHasFixedSize(true)
         listView.layoutManager = LinearLayoutManager(this)
 
-        val adapter = MyAdapter(BookModel().ITEMS, frameLayoutList != null)
+        val mTwoPane = frameLayoutList != null
+        Log.d("PRUEBAaaaaaa", mTwoPane.toString())
+
+        val adapter = MyAdapter(BookModel().ITEMS, mTwoPane)
         listView.adapter = adapter
     }
 

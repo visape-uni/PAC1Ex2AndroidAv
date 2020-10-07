@@ -7,6 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import edu.uoc.pac1ex2androidav.model.BookItem
 import kotlinx.android.synthetic.main.fragment_book_detail.*
+import java.text.DateFormat
+import java.text.SimpleDateFormat
 
 class BookDetailFragment : Fragment() {
 
@@ -31,6 +33,9 @@ class BookDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val item = arguments?.getSerializable("item") as BookItem
-        detailItem.text = getText(R.string.fragment_text_1).toString() + item.titol
+        authorItem.text = item.autor
+        val formatter = SimpleDateFormat("dd/MM/yyyy");
+        dateItem.text = formatter.format(item.dataPublicacio)
+        descriptionItem.text = item.descripcio
     }
 }
