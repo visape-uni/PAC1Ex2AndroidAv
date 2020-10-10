@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <item
+        android:id="@+id/action_order_autor"
+        android:title="@string/action_order_autor"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_order_title"
+        android:title="@string/action_order_title"
+        app:showAsAction="never" />
+</menu>
